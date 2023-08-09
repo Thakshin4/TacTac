@@ -1,0 +1,120 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+// Custom CSS
+.post {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+.post-image {
+  width: 300px; /* Set the desired width for your images */
+  height: 300px; /* Set the desired height for your images */
+  object-fit: cover;
+}
+
+.likes-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heart-icon {
+  width: 20px; /* Set the desired width for your heart icon */
+  height: 20px; /* Set the desired height for your heart icon */
+  margin-right: 5px;
+}
+
+// NavBar
+
+.bottom-navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  border-top: 1px solid #ccc;
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
+.nav-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Additional styles for active link */
+.nav-link.active .nav-icon {
+  filter: brightness(0.5);
+}
+/* styles.css */
+
+/* ... Existing styles ... */
+
+.bottom-navbar {
+  /* ... Existing styles ... */
+}
+
+.nav-link {
+  /* ... Existing styles ... */
+}
+
+.nav-icon {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 4px; /* Add margin to the bottom of the icons */
+}
+
+/* Additional styles for active link */
+.nav-link.active .nav-icon {
+  filter: brightness(0.5);
+}
