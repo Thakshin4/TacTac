@@ -1,4 +1,5 @@
 // index.js
+import { SSL_CRT_FILE, SSL_KEY_FILE, MONGO_DB_CONNECTION } from process.env;
 
 const express = require('express');
 const mongoose = require('mongoose');
@@ -13,7 +14,7 @@ const app = express();
 app.use(bodyParser.json());
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/tactac', {
+mongoose.connect(MONGO_DB_CONNECTION, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -44,8 +45,8 @@ app.delete('/posts/:postId', async (req, res) => {
 });
 
 // Set up HTTPS server
-const privateKey = fs.readFileSync(path.join(__dirname, 'ssl', 'private.key'), 'utf8');
-const certificate = fs.readFileSync(path.join(__dirname, 'ssl', 'certificate.crt'), 'utf8');
+const privateKey = fs.readFileSync(path.join(__dirname, 'ssl', SSL_KEY_FILE), 'utf8');
+const certificate = fs.readFileSync(path.join(__dirname, 'ssl', SSL_CRT_FILE), 'utf8');
 const credentials = { key: privateKey, cert: certificate };
 
 const httpsServer = https.createServer(credentials, app);
